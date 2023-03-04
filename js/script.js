@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const contWidth=container.offsetWidth;
+let grab = false;
 let n = 16;
 function f(){
 for(let i=0; i<(n*n); i++){
@@ -7,18 +8,16 @@ for(let i=0; i<(n*n); i++){
     div.setAttribute('class', 'grid');
     div.style.width= 100 / n + "%";
     container.appendChild(div);
-//     div.addEventListener('mousedown', h);
-//     function h(){
-//         div.addEventListener('mouseover', ()=>{
-//             div.style.backgroundColor='black';
-//     });
-// }
 }
-    const divs = document.querySelectorAll('.grid');
-    divs.forEach(div => div.addEventListener('click', h(div)));
-}
-function h(div){
-    div.addEventListener('mouseover', ()=>{
-        div.style.backgroundColor='black';
-    });
+    container.addEventListener('mousedown', function() {
+        grab=true;
+        container.addEventListener('mouseover', function (e){
+            if(grab) {
+                e.target.style.backgroundColor = "black";
+            }
+            window.addEventListener('mouseup', function () {grab=false;})
+        })
+
+    })
+
 }

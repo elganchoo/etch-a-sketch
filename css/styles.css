@@ -1,5 +1,6 @@
 body{
     background-color: lightgray;
+
 }
 .container{
     display: flex;
@@ -7,4 +8,8 @@ body{
     width: 500px;
     min-height: 500px;
     background-color: white;
+}
+.grid{
+    box-sizing: border-box;
+    border: 1px solid red;
 }
