@@ -3,11 +3,13 @@ body{
 
 }
 .container{
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     width: 500px;
     min-height: 500px;
     background-color: white;
+    align-self: center;
 }
 .grid{
     box-sizing: border-box;
