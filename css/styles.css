@@ -1,9 +1,13 @@
 body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: lightgray;
-
+    height: 100vh;
+    gap: 10%;
 }
 .container{
-    margin: auto;
+
     display: flex;
     flex-wrap: wrap;
     width: 500px;
@@ -14,4 +18,10 @@ body{
 .grid{
     box-sizing: border-box;
     border: 1px solid red;
+}
+
+.options{
+
+    display: flex;
+    flex-direction: column;
 }

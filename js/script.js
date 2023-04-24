@@ -4,7 +4,8 @@ let grab = true;
 let n = 16;
 
 function setGrid(){
-    let input = window.prompt("Enter the number of rows and columns: ");
+    let no= document.querySelector('#gridNo');
+    let input = no.value;
     while(input>100) input = window.prompt("Please enter a value smaller than 100: ");
     container.replaceChildren();
     f(Number(input));
